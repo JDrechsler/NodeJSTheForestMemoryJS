@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ExpressVueAppTemplate</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="app">
+
+        <h3 class="text-center">
+            TheForestHackNodeJS <br> {{status}}
+        </h3>
+
+        <p>Current foreground app: {{foregroundApp}}</p>
+
+        <p>
+            <button @click="activateHack">Turn on hack</button>
+        </p>
+
+        <span>Unlimited Resources: {{hacks.unlimitedRes.activated}}</span>
+        <button @click="hacks.unlimitedRes.activated = true">On</button>
+        <button @click='hacks.unlimitedRes.activated = false'>Off</button>
+
+    </div>
+
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <script type="text/javascript" src="js/socket.io.min.js"></script>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="client.js"></script>
+</body>
+
+</html>
